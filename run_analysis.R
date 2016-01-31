@@ -34,7 +34,7 @@ run_analysis <- function(){
   
   # Generate the merged tidy data txt file.
   mergedTidyData <- cbind(subject, activity, xData)
-  write.table(mergedTidyData, "merged_tidy_data.txt")
+  write.table(mergedTidyData, "merged_tidy_data.txt", row.names = F)
   
   # Creates the independent tidy data set with the average of each variable for each activity and each subject.
   library(data.table) 
